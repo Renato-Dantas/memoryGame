@@ -1,0 +1,137 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Righteous', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../images/screenBack.png);
+    background-size: contain;
+    background-color: #173487;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card{
+    width: 90px;
+    height: 130px;
+    position: relative;
+
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: transform .5s;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card_back, .card_front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-image: url(../images/backCard.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.flip{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card_front{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: #101c2c;
+}
+
+.card_back{
+    color: #101c2c;
+    background-color: none;
+    font-size: 30px;
+}
+
+.icon{
+    width: 80%;
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:0;
+}
+
+#restart{
+    padding: 20px;
+    font-size: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+#gameBoard{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap:20px
+}
+
+@media only screen and (max-width: 700px) {
+    .game-board{
+        max-width: 400px;
+        grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .icon{
+    width: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .game-board{
+        max-width: 300px;
+        grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card{
+        width: 62px;
+        height: 89px;
+    }
+
+    .icon{
+        width: 30px;
+    }
+
+    .card_back{
+        font-size: 20px;
+    }
+}
