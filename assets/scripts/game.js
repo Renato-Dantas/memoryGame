@@ -4,16 +4,12 @@ let game = {
     firstCard: null,
     secondCard: null,
 
-    techs: ['dragon2',
-        'css',
-        'electron',
-        'firebase',
-        'html',
-        'javascript',
-        'jquery',
-        'mongo',
-        'node',
-        'react'],
+    techs: ['blackWitcher',
+        'whiteDragon',
+        'warrior',
+        'witcher',
+        'turtle',
+        ],
 
     cards: null,
 

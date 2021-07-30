@@ -12,16 +12,16 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: url(../images/screenBack.png);
-    background-size: contain;
+    background-image: url(../images/back.jpg);
+    background-size: cover;
     background-color: #173487;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .card{
-    width: 90px;
-    height: 130px;
+    width: 150px;
+    height: 215px;
     position: relative;
 
     -webkit-transform-style: preserve-3d;
@@ -31,6 +31,7 @@ body{
 }
 
 .card_back, .card_front{
+    border-radius: 15px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -96,32 +97,43 @@ body{
 }
 
 #gameBoard{
-    max-width: 700px;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
     gap:20px
 }
 
-@media only screen and (max-width: 700px) {
-    .game-board{
-        max-width: 400px;
-        grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
-        gap: 20px;
+@media only screen and (max-width: 930px) {
+    .card{
+        width: 103px;
+        height: 149px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+   
+    .card{
+        width: 62px;
+        height: 89px;
     }
 
     .icon{
-    width: 40px;
+        width: 30px;
     }
 
+    .card_back{
+        font-size: 20px;
+    }
+
+    .icon{
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 480px) {
-    .game-board{
-        max-width: 300px;
-        grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
-        gap: 10px;
+@media only screen and (max-width: 400px) {
+    #gameBoard{
+        grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr;
     }
-
+    
     .card{
         width: 62px;
         height: 89px;
