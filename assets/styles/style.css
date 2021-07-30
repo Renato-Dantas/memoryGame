@@ -85,6 +85,8 @@ body{
     align-items: center;
     flex-direction: column;
     top:0;
+    text-align: center;
+    padding: 5px;
 }
 
 #restart{
@@ -117,7 +119,7 @@ body{
     }
 
     .icon{
-        width: 30px;
+        width: 100px;
     }
 
     .card_back{
@@ -125,7 +127,7 @@ body{
     }
 
     .icon{
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -135,12 +137,8 @@ body{
     }
     
     .card{
-        width: 62px;
-        height: 89px;
-    }
-
-    .icon{
-        width: 30px;
+        width: 89px;
+        height: 128px;
     }
 
     .card_back{
